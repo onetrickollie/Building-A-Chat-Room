@@ -4,5 +4,7 @@
 - Project Started
 - Socket created
 - App can communicate with its own device, but not yet with other device
+- Socket.io server side setup completed
+
 
 

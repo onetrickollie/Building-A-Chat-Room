@@ -1,0 +1,7 @@
+July 12th 2024:
+Sockets:
+why socket - socket can open up realtime connections between server and devices. Instead of having serer listen every few seconds,
+sockets can open a longlasting connection, resulting in faster messaging. 
+
+
+
