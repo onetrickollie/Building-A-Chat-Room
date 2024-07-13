@@ -9,6 +9,9 @@
 - App can now commuicate between two sockets(is this the right term??)
 - App now shows connection status
 - App now shows typing status
+- Logic Completed
+
+
 
 
 
