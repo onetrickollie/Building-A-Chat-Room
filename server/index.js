@@ -38,7 +38,7 @@ io.on('connection', socket => {
     // Upon connection - only to user
     // hence socket.emit, not io.emit
     // io.emit will send to everyone, socket.emit will send to specific socket(user)
-    socket.emit('message', buildMsg(ADMIN, "Welcome to Chat App!"))
+    socket.emit('message', buildMsg(ADMIN, "Welcome to AnonymousChat built by Kai!"))
 
     socket.on('enterRoom', ({ name, room }) => {
 
