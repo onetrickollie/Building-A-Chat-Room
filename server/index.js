@@ -7,6 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const PORT = process.env.PORT || 3500
+const ADMIN = "Admin"
 
 const app = express()
 
@@ -15,6 +16,14 @@ app.use(express.static(path.join(__dirname, "public")))
 const expressServer = app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
 })
+
+// state for users
+const UsersState = {
+    users: [],
+    setUsers: function(newUserArray){
+        this.users = newUserArray
+    }
+}
 
 const io = new Server(expressServer, {
     // limiting access
@@ -51,3 +60,15 @@ io.on('connection', socket => {
         socket.broadcast.emit('activity', name)
     })
 })
+
+function buildMsg(name,text){
+    return { 
+        name,
+        text,
+        time: new Intl.DateTimeFormat('default',{
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+        }).format(new Date())
+    }
+}
