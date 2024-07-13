@@ -14,8 +14,8 @@ function sendMessage(e) {
 // message sent and reset
     if (nameInput.value && msgInput.value && chatRoom.value) {
         socket.emit('message', {
-            "name":nameInput.value,
-            "text":msgInput.value
+            name:nameInput.value,
+            text:msgInput.value
         })
         msgInput.value = ""
     }
@@ -26,8 +26,8 @@ function enterRoom(e){
     e.preventDefault()
     if(nameInput.value && chatRoom.value){
         socket.emit('enterRoom',{
-            "name": nameInput.value,
-            "room": chatRoom.value
+            name: nameInput.value,
+            room: chatRoom.value
         })
     }
 }
@@ -37,9 +37,10 @@ document.querySelector('.form-msg')
     .addEventListener('submit', sendMessage)
 document.querySelector('.form-join')
     .addEventListener('submit', enterRoom)
-    msgInput.addEventListener('keypress',() =>{
-        socket.emit('activity',socket.id.substring(0,5))
-    })
+msgInput.addEventListener('keypress',() =>{
+    socket.emit('activity',nameInput.value)
+})
+
 // Listen for messages 
 socket.on("message", (data) => {
     activity.textContent = ""
