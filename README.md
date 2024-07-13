@@ -7,6 +7,8 @@
 - Socket.io server side setup completed
 - Socket.io client side setup completed
 - App can now commuicate between two sockets(is this the right term??)
+- App now shows connection status
+- App now shows typing status
 
 
 
