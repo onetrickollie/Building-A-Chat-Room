@@ -1,4 +1,4 @@
-const socket = io('https://chatroom430.netlify.app/')
+const socket = io('https://chatroom420.onrender.com')
 
 const msgInput = document.querySelector('#message')
 const nameInput = document.querySelector('#name')
