@@ -1,7 +1,9 @@
-//change this before push!!!!
-//running locally, do:
+// app.js
+
+// Change this before push!!!!
+// Running locally, do:
 //const socket = io('ws://localhost:3500')
-//before pushing, chang it to:
+// Before pushing, change it to:
 const socket = io('https://anonymouschat-lwyq.onrender.com/');
 
 const msgInput = document.querySelector('#message');
@@ -18,8 +20,18 @@ const profilePics = {
     'mt': 'assets/meta_knight.webp'
 };
 
-// Default profile picture
-const defaultProfilePic = 'assets/marioPFP.png';
+// Default profile pictures
+const defaultProfilePic1 = 'assets/marioPFP.png';
+const defaultProfilePic2 = 'assets/peachPFP.webp';
+
+// Helper function to determine which default profile picture to use
+function getDefaultProfilePic(name) {
+    // You can customize this logic to alternate or choose based on certain criteria
+    const defaultPics = [defaultProfilePic1, defaultProfilePic2];
+    const index = name.charCodeAt(0) % 2; // Simple even/odd logic for demo
+    console.log(`Assigning default profile pic: ${defaultPics[index]} to user: ${name}`);
+    return defaultPics[index];
+}
 
 function sendMessage(e) {
     e.preventDefault();
@@ -57,12 +69,14 @@ msgInput.addEventListener('keypress', () => {
 socket.on("message", (data) => {
     activity.textContent = "";
     const { name, text, time } = data;
+    console.log(`Received message from: ${name}, text: ${text}, time: ${time}`);
     const li = document.createElement('li');
     li.className = 'post';
     if (name === nameInput.value) li.className = 'post post--left';
     if (name !== nameInput.value && name !== 'Admin') li.className = 'post post--right';
     if (name !== 'Admin') {
-        const profilePicUrl = profilePics[name] || defaultProfilePic; // Use default profile picture if not found
+        const profilePicUrl = profilePics[name] || getDefaultProfilePic(name);
+        console.log(`Using profile picture: ${profilePicUrl} for user: ${name}`);
         li.innerHTML = `<div class="post__header ${name === nameInput.value
             ? 'post__header--user'
             : 'post__header--reply'
@@ -82,6 +96,7 @@ socket.on("message", (data) => {
 
 let activityTimer;
 socket.on("activity", (name) => {
+    console.log(`${name} is typing...`);
     activity.textContent = `${name} is typing...`;
 
     // Clear after 3 seconds 
@@ -92,10 +107,12 @@ socket.on("activity", (name) => {
 });
 
 socket.on('userList', ({ users }) => {
+    console.log(`Received user list: ${JSON.stringify(users)}`);
     showUsers(users);
 });
 
 socket.on('roomList', ({ rooms }) => {
+    console.log(`Received room list: ${JSON.stringify(rooms)}`);
     showRooms(rooms);
 });
 
