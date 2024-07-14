@@ -12,6 +12,10 @@ https://chatroom420.onrender.com/
 - App now shows typing status
 - Logic Completed
 
+# July 14th 2024
+- background img updated
+- Profile picture feature add
+
 
 
 
