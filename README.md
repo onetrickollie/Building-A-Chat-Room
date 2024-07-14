@@ -13,9 +13,11 @@ https://chatroom420.onrender.com/
 - Logic Completed
 
 # July 14th 2024
-- background img updated
+- Background img updated
 - Profile picture feature add
-
+- Type in "kirby" in name for a secret pfp
+- Type in "mt" in name for a secret pfp
+  
 
 
 
