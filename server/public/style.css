@@ -7,12 +7,11 @@
 }
 
 body {
-    background-color: #000000;
-    color: #efe6e6;
-    background-image: url('assets/kirbyBG.gif');
-    background-size: cover;
+    background-color: #000;
+    background-image: url(assets/kirbyBG.gif);
     background-position: center;
-    background-repeat: no-repeat;
+    color: #fff;
+
 }
 
 main {
@@ -34,7 +33,7 @@ form {
 
 input {
     flex-grow: 1;
-    max-width: calc(70% - .25rem);
+    max-width: calc(80% - .25rem);
 }
 
 button {
@@ -47,15 +46,8 @@ button {
     padding: .5rem;
 }
 
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: .25rem;
-}
-
 .chat-display {
-    background-color: rgba(46, 46, 46, 0.8);
+    background-color: rgba(46,46,46,0.5);
     list-style-type: none;
     width: 100%;
     max-width: 600px;
@@ -76,8 +68,6 @@ button {
     margin: .5rem;
     overflow: hidden;
     flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
 }
 
 .post--left {
@@ -88,12 +78,6 @@ button {
 .post--right {
     width: 60%;
     align-self: flex-end;
-}
-
-.post__content {
-    display: flex;
-    align-items: flex-start;
-    gap: .5rem;
 }
 
 .post__header {
@@ -125,11 +109,6 @@ button {
     margin-top: 5px;
     color: #333;
     padding: .25rem .5rem;
-}
-
-.post__content img.profile-pic {
-    width: 30px;
-    height: 30px;
 }
 
 .user-list,
