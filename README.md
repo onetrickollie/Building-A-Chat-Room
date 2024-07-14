@@ -12,6 +12,12 @@ https://chatroom420.onrender.com/
 - App now shows typing status
 - Logic Completed
 
+# July 14th 2024
+- Background img updated
+- Profile picture feature add
+- Type in "kirby" in name for a secret pfp
+- Type in "mt" in name for a secret pfp
+  
 
 
 
