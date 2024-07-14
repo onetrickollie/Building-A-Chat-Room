@@ -1,3 +1,7 @@
+//change this before push!!!!
+//running locally, do:
+//const socket = io('ws://localhost:3500')
+//before pushing, chang it to:
 const socket = io('https://anonymouschat-lwyq.onrender.com/');
 
 const msgInput = document.querySelector('#message');
@@ -15,7 +19,7 @@ const profilePics = {
 };
 
 // Default profile picture
-const defaultProfilePic = 'assets/kirbyBG.gif';
+const defaultProfilePic = 'assets/marioPFP.png';
 
 function sendMessage(e) {
     e.preventDefault();
