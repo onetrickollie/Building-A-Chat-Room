@@ -7,8 +7,12 @@
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: #000000;
+    color: #efe6e6;
+    background-image: url('assets/kirbyBG.gif');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -44,7 +48,7 @@ button {
 }
 
 .chat-display {
-    background-color: #333;
+    background-color: rgba(46,46,46,0.5rem);
     list-style-type: none;
     width: 100%;
     max-width: 600px;
@@ -59,7 +63,7 @@ button {
 }
 
 .post {
-    background-color: #eee;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 0 0 .25rem;
     margin: .5rem;
@@ -87,7 +91,7 @@ button {
 }
 
 .post__header--user {
-    background-color: blue;
+    background-color: rgb(19, 19, 34);
 }
 
 .post__header--reply {

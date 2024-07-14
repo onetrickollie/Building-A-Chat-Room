@@ -1,4 +1,4 @@
-const socket = io('https://chatroom420.onrender.com')
+const socket = io('ws://localhost:3500')
 
 const msgInput = document.querySelector('#message')
 const nameInput = document.querySelector('#name')
@@ -10,8 +10,6 @@ const chatDisplay = document.querySelector('.chat-display')
 
 function sendMessage(e) {
     e.preventDefault()
-    // if input is valid
-    // message sent and reset
     if (nameInput.value && msgInput.value && chatRoom.value) {
         socket.emit('message', {
             name: nameInput.value,
@@ -32,7 +30,6 @@ function enterRoom(e) {
     }
 }
 
-// Button
 document.querySelector('.form-msg')
     .addEventListener('submit', sendMessage)
 
@@ -68,12 +65,11 @@ socket.on("message", (data) => {
     chatDisplay.scrollTop = chatDisplay.scrollHeight
 })
 
-// show typing activity
 let activityTimer
 socket.on("activity", (name) => {
     activity.textContent = `${name} is typing...`
 
-    // clear after 1.5 seconds
+    // Clear after 3 seconds 
     clearTimeout(activityTimer)
     activityTimer = setTimeout(() => {
         activity.textContent = ""
