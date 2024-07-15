@@ -18,6 +18,8 @@ https://anonymouschat-lwyq.onrender.com
 - Type in "kirby" in name for a secret pfp
 - Type in "mt" in name for a secret pfp
   
+# July 15th 2024
+- New PFP options added  
 
 
 
