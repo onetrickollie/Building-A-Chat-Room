@@ -17,7 +17,8 @@ const chatDisplay = document.querySelector('.chat-display');
 // Profile pictures for users
 const profilePics = {
     'kirby': 'assets/kirbyPFP.png',
-    'mt': 'assets/meta_knight.webp'
+    'mt': 'assets/meta_knight.webp',
+    'boss': 'assets/bossPFP.png'
 };
 
 // Default profile pictures
