@@ -90,12 +90,17 @@ button {
 }
 
 .post__header--user {
-    background-color: blue;
+    background-color: rgb(7, 7, 9);
 }
 
 .post__header--reply {
-    background-color: purple;
+    background-color: rgba(146, 136, 146, 0.5); /* Adjust the last value for more or less transparency */
+    backdrop-filter: blur(5px); /* Adds a slight blur effect for glossiness */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: adds a light border to enhance the glossy effect */
+    border-radius: 5px; /* Rounded corners for a smoother look */
 }
+
 
 .post__header--name {
     font-weight: bold;
