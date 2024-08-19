@@ -42,34 +42,13 @@ Here’s a quick breakdown of how the app functions:
   - Built with HTML and CSS.
   - Designed for a clean, fun, and easy-to-use experience.
 
-Challenges & Potential Difficulties
------------------------------------
-Here are some challenges you might encounter:
-
-- Real-time Sync Issues:
-  - Messages might sometimes appear out of order.
-  - User lists and room lists may not always update immediately.
-
-- Profile Picture Assignment:
-  - Making sure users get the right profile picture can be tricky.
-  - Debugging issues might require close attention to detail.
-
-- Cross-Browser Compatibility:
-  - Some modern CSS features might not work the same across all browsers.
-  - Testing is key to ensuring a consistent experience.
-
-- Security Considerations:
-  - WebSocket security is crucial to prevent unauthorized access.
-
-- Deployment:
-  - Configuring environment-specific settings (like WebSocket URLs) can add complexity.
 
 Running the Application Locally
 -------------------------------
 Want to try it out on your machine? Here’s how:
 
 1. Clone the Repository:
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/onetrickollie/Building-A-Chat-Room
 
 2. Install Dependencies & Start the Server:
    npm install
